@@ -16,7 +16,6 @@ export async function getBackendStatus() : Promise<string> {
 
 export async function addEntry(entry: string) : Promise<void> {
   console.log('API_URL: ', API_URL);
-  console.log('envs: ', process.env);
   console.log('About to submit:', entry);
-  await api.post('/entry', {entry: entry});
+  await api.post('/entry', {entry: entry}, {withCredentials: true});
 }
