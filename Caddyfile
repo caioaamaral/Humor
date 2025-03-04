@@ -1,0 +1,5 @@
+myapp.local:9595 {
+	bind 0.0.0.0
+	tls internal
+	reverse_proxy :3000
+}
